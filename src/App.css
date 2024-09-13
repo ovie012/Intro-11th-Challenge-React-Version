@@ -1,0 +1,582 @@
+@font-face {
+  font-family: 'Epilogue';
+  src: url(../font/Epilogue-VariableFont_wght.ttf) format(truetype),
+       url(../font/Epilogue-Italic-VariableFont_wght.ttf) format(truetype);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Epilogue', sans-serif;
+}
+
+.main-div {
+  height: 100vh;
+  width: 100%;
+  background: hsl(0, 0%, 98%);
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 1100px) {
+  .main-div {
+    overflow-y: scroll;
+  }
+}
+
+/* Header styling */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  width: 96%;
+  position: fixed;
+  margin-left: 2%;
+  background: hsl(0, 0%, 98%);
+  top: 0;
+}
+
+.snap {
+  height: 25px;
+}
+
+.snap img {
+  height: 100%;
+}
+
+nav.dropdown,
+nav.account {
+  display: flex;
+  align-items: center;
+}
+
+nav.dropdown ul {
+  display: flex;
+  position: absolute;
+  left: 130px;
+  width: 30%;
+  font-size: 0.8rem;
+  gap: 35px;
+}
+
+nav.dropdown ul li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  opacity: 0.7;
+  font-weight: 600;
+  transition: 0.2s ease-in-out;
+}
+
+nav.dropdown ul li:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+nav.dropdown ul li img {
+  width: 7px;
+  height: 5px;
+  margin-left: 7px;
+}
+
+nav.account ul {
+  display: flex;
+  width: 30%;
+  font-size: 0.8rem;
+  font-weight: 600;
+  gap: 30px;
+  align-items: center;
+}
+
+nav.account {
+  position: absolute;
+  right: 0;
+}
+
+nav.account ul li {
+  list-style: none;
+  opacity: 0.7;
+  transition: 0.2s ease-in-out;
+}
+
+nav.account ul li:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+nav.account ul li:nth-child(2) {
+  border: 2px solid hsla(0, 0%, 8%, 0.7);
+  height: 35px;
+  min-width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.features {
+  position: fixed;
+  top: 58px;
+  left: 108px;
+  background: hsl(0, 0%, 100%);
+  height: 140px;
+  width: 120px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 35px hsla(0, 0%, 41%, 0.5);
+  cursor: pointer;
+}
+
+.features ul {
+  margin-left: 10%;
+  margin-top: 8%;
+}
+
+.features ul li {
+  list-style: none;
+  opacity: 0.7;
+  font-size: 0.7rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 6%;
+  margin: 1%;
+}
+
+.features ul li img {
+  height: 12px;
+  margin-right: 10px;
+}
+
+.company {
+  position: fixed;
+  top: 58px;
+  left: 260px;
+  background: hsl(0, 0%, 100%);
+  height: 100px;
+  width: 90px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 35px hsla(0, 0%, 41%, 0.5);
+  cursor: pointer;
+}
+
+.company ul {
+  margin-left: 15%;
+  margin-top: 15%;
+}
+
+.company ul li {
+  list-style: none;
+  opacity: 0.7;
+  font-size: 0.7rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 5%;
+  margin: 6%;
+}
+
+.active {
+  display: block;
+}
+
+/* body styling */
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+}
+
+.main {
+  width: 75%;
+  margin-bottom: 10%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.text {
+  width: 50%;
+  margin-top: 8%;
+}
+
+.text h1 {
+  font-size: 3.2rem;
+  margin-bottom: 6%;
+}
+
+.text p {
+  font-size: 0.7rem;
+  font-weight: 600;
+  line-height: 15px;
+  margin-bottom: 6%;
+  color: hsla(0, 0%, 41%, 0.8);
+}
+
+.text button {
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 10px;
+  height: 35px;
+  width: 100px;
+  margin-bottom: 10%;
+  color: hsl(0, 0%, 98%);
+  background: hsl(0, 0%, 8%);
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.text button:hover {
+  background: hsl(0, 0%, 98%);
+  color: hsl(0, 0%, 8%);
+}
+
+.logos {
+  display: flex;
+  align-items: center;
+}
+
+.logos img {
+  margin-right: 25px;
+}
+
+.databiz {
+  width: 70px;
+}
+
+.meet {
+  width: 50px;
+}
+
+.maker {
+  width: 55px;
+}
+
+.audiophile {
+  width: 45px;
+}
+
+.banner {
+  width: 37%;
+  height: 430px;
+  margin-top: -5%;
+  float: right;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+}
+
+
+.mobile-nav,
+.click,
+.close
+{
+  display: none;
+}
+
+.mobile-banner {
+  display: none;
+}
+
+@media only screen and (min-width: 1500px) {
+
+  .banner {
+      height: 500px;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+
+  body {
+      overflow: auto;
+  }
+
+  .main {
+      margin-top: 4%;
+  }
+
+  .banner {
+      height: 400px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  nav.dropdown,
+  .features,
+  .company {
+      display: none;
+  }
+
+  nav.account {
+      display: none;
+  }
+
+  body {
+      overflow: auto;
+  }
+
+  header {
+      height: 50px;
+  }
+
+  .main {
+      width: 85%;
+  }
+
+  .text h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10%;
+  }
+
+  .text p {
+      margin-bottom: 10%;
+  }
+
+  .text button {
+      margin-bottom: 20%;
+  }
+
+  .banner {
+      width: 45%;
+  }
+
+  .click,
+  .close {
+      display: block;
+      width: 30px;
+      position: fixed;
+      top: 15px;
+      right: 20px;
+  }
+
+  .click img,
+  .close img {
+      width: 100%;
+  }
+
+  .active {
+      display: block;
+  }
+
+  .snap {
+      margin-top: 10px;
+      margin-left: 10px;
+  }
+
+  /* body:not(.dimmed) {
+      background: hsla(0, 0%, 8%, 0.4);
+      z-index: 5;
+      opacity: 0.5;
+  } */
+
+  .cover {
+      width: 100%;
+      height: 100%;
+      z-index: 10;
+      background: hsla(0, 0%, 8%, 0.6);
+      position: fixed;
+      top: 0;
+      left: 0;
+  }
+
+  .mobile-nav.active {
+      display: flex;
+  }
+
+  .mobile-nav {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      right: 0;
+      background: hsl(0, 0%, 98%);
+      width: 65vw;
+      height: 100vh;
+      z-index: 100;
+      padding-top: 90px;
+      padding-left: 20px;
+      overflow-y: scroll;
+      opacity: 1;
+  }
+
+  .mobile-nav li {
+      list-style: none;
+  }
+
+  .mobile-dropdown {
+      width: 70%;
+      margin-bottom: 40px;
+  }
+
+  .mobile-dropdown ul {
+      width: 100%;
+  }
+
+  .mobile-dropdown ul li {
+      display: flex;
+      width: 100%;
+      font-size: 1rem;
+      font-weight: 600;
+      opacity: 0.7;
+      padding-bottom: 15%;
+  }
+
+  .mobile-dropdown ul li img {
+      width: 12px;
+      height: 8px;
+      margin-top: 4px;
+      margin-left: 8px;
+  }
+
+  .mobile-account {
+      margin-top: 120px;
+      margin-bottom: 20px;
+      width: 90%;
+      margin-left: 5%;
+  }
+
+  .mobile-account ul {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .mobile-account ul li {
+      font-size: 1rem;
+      opacity: 0.7;
+      font-weight: 600;
+  }
+
+  .mobile-account ul li:nth-child(2) {
+      border: 2px solid hsla(0, 0%, 8%, 0.7);
+      height: 45px;
+      min-width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 15px;
+      margin-top: 10px;
+  }
+
+  .mobile-features {
+      margin-left: 10px;
+      font-size: 1rem;
+      margin-bottom: 10px;
+      gap: 5px;
+  }
+
+  .mobile-features ul li {
+      display: flex;
+      gap: 15px;
+  }
+
+  .mobile-features ul li img {
+      width: 20px;
+      height: auto;
+      margin-top: -5px;
+  }
+
+  .moblie-company {
+      font-size: 1rem;
+      margin-left: 30px;
+      gap: 5px;
+      margin-bottom: 10px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .mobile-account {
+      margin-top: 0;
+      margin-left: 0;
+  }
+
+  .main {
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10%;
+  }
+
+  .banner {
+      display: none;
+  }
+
+  .mobile-banner {
+      display: block;
+      min-width: 100%;
+      height: 40%;
+  }
+
+  .mobile-banner img {
+      width: 100%;
+      height: 100%;
+  }
+
+  .text {
+      width: 95%;
+      height: 40%;
+      margin-top: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+  }
+
+  .text br {
+      display: none;
+  }
+
+  .text h1 {
+      width: 100%;
+      font-size: 2.2rem;
+      margin-bottom: 5%;
+  }
+
+  .text p {
+      width: 100%;
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 22px;
+      margin-bottom: 7%;
+  }
+
+  .text button {
+      font-size: 1rem;
+      font-weight: 600;
+      width: 40%;
+      height: 45px;
+      border-radius: 16px;
+      color: hsla(0, 0%, 98%, 0.9);
+      margin-bottom: 15%;
+  }
+
+  .logos {
+      width: 95%;
+      justify-content: space-between;
+  }
+
+  .logos img {
+      margin-right: 0;
+  }
+
+  .databiz {
+      width: 80px;
+  }
+
+  .meet {
+      width: 60px;
+  }
+
+  .maker {
+      width: 65px;
+  }
+
+  .audiophile {
+      width: 55px;
+  }
+}
